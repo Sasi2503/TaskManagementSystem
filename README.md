@@ -11,7 +11,7 @@ This project is organized into several folders, each serving a specific purpose 
    - The Entities files define the structure of the data stored in the database.
    - The repositories provide methods for querying and manipulating data in the database.
 
-### 2. Services (Applicaton Layer)
+### 2. Services (Application Layer)
    - The Services folder holds Service Models, which contain business logic related to task management.
    - These models interact with the DAL layer to perform CRUD (Create, Read, Update, Delete) operations on tasks.
    - This folder contains files that bridge the communication between the DAL and Services layers.
