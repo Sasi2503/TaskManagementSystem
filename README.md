@@ -18,49 +18,59 @@ This project is organized into several folders, each serving a specific purpose 
    - It ensures smooth data flow between the database and the business logic layer.
 
 ### 4. Presentation 
-   - The Presentation folder holds **HTML** files for the user interface (UI) of the Task Management System.
-   - These HTML files are rendered by the Django framework to display the application to users.
+   - The Presentation folder contains HTML files that constitute the user interface (UI) of the Task Management System.
+   - These HTML files are utilized by the Django framework to render the application interface for users.
 
-### 1. View Models
-     - View Models are responsible for handling data received from the UI and passing it to the Services layer.
-     - They prepare and validate data before sending it to the business logic layer for processing.
+## 1. View Models
+   - The View Models folder is responsible for managing the data flow between the user interface and the Services layer.
+   - View Models handle incoming data from the UI, prepare and validate it, and then pass it to the Services layer for further processing.
   
-### 2. UI
-     - The UI folder contains the main business logic of the application.
-     - It coordinates the interaction between the user interface, services, and data access layers.
-     
+## 2. UI
+   - The UI folder serves as the primary location for the implementation of the application's business logic.
+   - It acts as an intermediary layer, facilitating communication and interaction between the user interface, services, and data access layers.
    
 ### 7. Management
    - The Management folder encompasses all the components of the Task Management System.
    - It includes subfolders for DAL, Services, Bridge, Presentation, View Models, and UI.
 
 ## Usage
+
 To use the Task Management System, follow these steps:
 
-**Management** is the application name in the **Django project**
+1. **Installation**:
+   - Ensure you have Django installed. If not, install it using:
+     ```
+     pip install django
+     ```
 
+2. **Configuration**:
+   - Configure your database settings in the Django project settings file.
 
+3. **Database Setup**:
+   - Run migrations to create the necessary database tables using:
+     ```
+     python manage.py migrate
+     ```
 
-1. Ensure you have Django installed. If not, install it using `pip install django`.
-2. Configure your database settings in the Django project settings file.
-3. Run migrations to create the necessary database tables using `python manage.py migrate`.
-4. Start the Django development server using `python manage.py runserver`.
+4. **Running the Server**:
+   - Start the Django development server using:
+     ```
+     python manage.py runserver
+     ```
 
- - Login using
- -- Username : Admin
- -- password  : admin#111
-   
-5. Access the application through the provided URL and interact with the user interface to manage tasks.
+5. **Logging In**:
+   - Once the server is running, log in with the following credentials:
+     - **Username**: Admin
+     - **Password**: admin#111
+
+6. **Accessing the Application**:
+   - Access the application through the provided URL and interact with the user interface to manage tasks.
+
 
 ## Follow
 (https://www.instagram.com/sasidhar316?igsh=eHVhb2oycGFybXN6)
 
 
-If you would like to contribute to the Task Management System project, please follow these guidelines:
-- Fork the repository.
-- Create a new branch for your feature or bug fix.
-- Make your changes and ensure they pass all tests.
-- Submit a pull request, clearly describing the changes you've made.
 
 
 
