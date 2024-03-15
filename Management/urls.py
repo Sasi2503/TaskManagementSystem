@@ -1,7 +1,7 @@
 from django.urls import path
 from Management.presentation import UI
 urlpatterns = [
-    path('Dashboard/',UI.dashboard,name='Dashboard'),
+    path('',UI.dashboard,name='Dashboard'),
     path('register/', UI.register, name='register'),
     path('login/', UI.user_login, name='login'),
     path('HomePage/',UI.Home,name='TaskManagement'),
