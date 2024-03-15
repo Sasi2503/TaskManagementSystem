@@ -39,14 +39,17 @@ To use the Task Management System, follow these steps:
 
 **Management** is the application name in the **Django project**
 
-## Login using
- - Username : Admin
- - password  : admin#111
+
 
 1. Ensure you have Django installed. If not, install it using `pip install django`.
 2. Configure your database settings in the Django project settings file.
 3. Run migrations to create the necessary database tables using `python manage.py migrate`.
 4. Start the Django development server using `python manage.py runserver`.
+
+ - Login using
+ -- Username : Admin
+ -- password  : admin#111
+   
 5. Access the application through the provided URL and interact with the user interface to manage tasks.
 
 ## Follow
