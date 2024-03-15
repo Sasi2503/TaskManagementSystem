@@ -2,7 +2,7 @@
 
 Welcome to the Task Management System!
 
-This project is organized into several folders, each serving a specific purpose in the overall architecture of the application.
+This project is organized into several folders, each serving a specific purpose in the overall 3-Tier architecture of the application.
 
 ## Folder Structure
 
@@ -21,11 +21,11 @@ This project is organized into several folders, each serving a specific purpose 
    - The Presentation folder holds **HTML** files for the user interface (UI) of the Task Management System.
    - These HTML files are rendered by the Django framework to display the application to users.
 
-  ### 1. View Models
+### 1. View Models
      - View Models are responsible for handling data received from the UI and passing it to the Services layer.
      - They prepare and validate data before sending it to the business logic layer for processing.
   
-  ### 2. UI
+### 2. UI
      - The UI folder contains the main business logic of the application.
      - It coordinates the interaction between the user interface, services, and data access layers.
      
@@ -39,9 +39,9 @@ To use the Task Management System, follow these steps:
 
 **Management** is the application name in the **Django project**
 
-## Login
- -- Login using **Username : Admin**
- --             **Password : admin#111**
+## Login using
+   ##  **Username : Admin** 
+   ##   **Password : admin#111**
 
 1. Ensure you have Django installed. If not, install it using `pip install django`.
 2. Configure your database settings in the Django project settings file.
