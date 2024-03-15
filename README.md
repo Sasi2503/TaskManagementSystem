@@ -11,13 +11,13 @@ This project is organized into several folders, each serving a specific purpose 
    - The Entities files define the structure of the data stored in the database.
    - The repositories provide methods for querying and manipulating data in the database.
 
-### 2. Services
+### 2. Services (Applicaton Layer)
    - The Services folder holds Service Models, which contain business logic related to task management.
    - These models interact with the DAL layer to perform CRUD (Create, Read, Update, Delete) operations on tasks.
    - This folder contains files that bridge the communication between the DAL and Services layers.
    - It ensures smooth data flow between the database and the business logic layer.
 
-### 4. Presentation 
+### 4. Presentation (Presentation Layer)
    - The Presentation folder contains HTML files that constitute the user interface (UI) of the Task Management System.
    - These HTML files are utilized by the Django framework to render the application interface for users.
 
