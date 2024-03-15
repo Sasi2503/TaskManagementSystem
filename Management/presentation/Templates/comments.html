@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management System - Comments</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+       
+        .comments-container {
+            margin-top: 50px;
+        }
+        .comment {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        
+        
+        .add-comment-form {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <h1 class="text-center">Comments</h1>
+                <div class="comments-container">
+                    <div class="add-comment-form">
+                        <form method="post">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <label for="content">Add Comment:</label>
+                                <input type="text" class="form-control" id="content" name="content" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Add</button>
+                            <a href="{% url 'TaskManagement'  %}" class="btn btn-secondary ">Back</a>
+                        </form><br>
+                        {% if Content %}
+                        <h3>Task : {{ Content.0.TaskID.Title }}</h3><br>
+
+                        {% for data in Content %}
+
+                        <div class="comment">
+                            <p><strong>{{ data.UserID.firstname }}</strong> {{ data.Date}}</p>
+                            
+                            <p>{{ data.comment }}</p>
+                        </div>
+                        
+                        {% endfor %}
+                        
+                        {% else %}
+                        
+                            <p>No comments available for this task.</p>
+                        {% endif %}
+
+                </div>
+                
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

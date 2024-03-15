@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management System</title>
+    
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body{
+            background-color: aliceblue;
+        }
+        h1, th, td{
+            text-align: center;
+        }
+        .container{
+            background-color: white;
+            box-shadow: aqua;
+            border-radius: 20px;
+        }
+        .action-buttons {
+            display: flex;
+            justify-content: flex-end;
+        }
+        .action-buttons button {
+            margin-left: 5px;
+        }
+        #tasks{
+            margin-right: 60%;
+            
+        }
+        #tasks:hover{
+            color: aliceblue;
+            background-color: rgba(64, 117, 197, 0.915);
+        }
+        .create-button-container {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 20px; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5 shadow">
+        <h1>Task Management System</h1><br>
+
+
+        <div class="create-button-container">
+            <a href="{% url 'allAssignedTasks'  %}" class="btn btn-dark" id="tasks">Assigned Tasks</a>
+            <a href="{% url 'CreateTask'  %}" class="btn btn-secondary mr-2">Create Task</a>
+            <a href="{% url 'mytask'  %}" class="btn btn-primary mr-2">My Tasks</a>
+            <a href="{% url 'Dashboard'  %}" class="btn btn-primary">Log Out</a>
+        </div>
+        
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>TaskID</th>
+                    <th class="col-2">Created By</th>
+                    <th class="col-4">Task</th>
+                    <th class="col-1">Due Date</th>
+                    <th class="col-2">status</th>
+                    <th>Priority</th>
+                    <th class="col-2">Actions</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                {% for task in form %}
+                
+                <tr>
+                    <td>{{task.taskID}}</td>
+                    <td>{{task.Assignedby.firstname}}</td>
+                    <td><strong>{{ task.Title }}</strong></td>
+                    <td>{{ task.DueDate }}</td>
+                    <td>{{ task.Status.Status }}</td>
+                    <td>{{ task.Priority.PriorityName}}</td>
+                    <td class="action-buttons">
+                        <a href="{% url 'AssignTask' pk=task.taskID %}" method="post" class="btn btn-success mr-3">Assign</a>
+                        <a href="{% url 'update' pk=task.taskID %}" method="post" class="btn btn-success mr-3">Edit</a>
+                        <a href="{% url 'Comments' pk=task.taskID %}" method="post" class="btn btn-success">Comments</a>
+
+                        </td>
+                </tr></a>
+                {% endfor %}
+            </tbody>
+        </table>
+        
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

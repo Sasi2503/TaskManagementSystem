@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management System</title>
+    
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        h1, th{
+            text-align: center;
+        }
+        .action-buttons {
+            display: flex;
+            justify-content: flex-end;
+        }
+        .action-buttons button {
+            margin-left: 5px;
+        }
+        .create-button-container {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 20px; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Tasks Assigned</h1><br>
+
+
+        <div class="create-button-container">
+            <a href="{% url 'CreateTask'  %}" class="btn btn-primary mr-2">Create Task</a>
+            <a href="{% url 'TaskManagement'  %}" class="btn btn-primary">Back</a>
+        </div>
+        
+        
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Task ID</th>
+                    <th class="col-5">Task</th>
+                    <th class="col-1">Due Date</th>
+                    <th>status</th>
+                    <th>Priority</th>
+                    <th>Assigned Users</th>
+                    <!-- <th class="col-2">Actions</th> -->
+                    
+                </tr>
+            </thead>
+            <tbody>
+                
+                {% for task in form %}
+                
+                <tr>
+                    <td>{{task.TaskID.TaskID}}</td>
+                    <td><strong>{{ task.TaskID.Title }} </strong>  <br><strong>Description :</strong> {{ task.TaskID.Description }}</td>
+                    <td>{{ task.DueDate }}</td>
+                    <td>{{ task.Status.Status }}</td>
+                    <td>{{ task.PriorityID.PriorityName}}</td>
+                    <td><strong>{{ task.AssignedTo.firstname}}</strong></td>
+                    <!-- <td class="action-buttons">
+                        
+                        <a href="{% url 'AssignTask' pk=task.TaskID.TaskID %}" method="post" class="btn btn-success mr-2">Assign</a>
+                        <a href="{% url 'updatestatus' pk=task.TaskID.TaskID %}" method="post" class="btn btn-success">Update status</a>
+                       
+                    </td> -->
+                    <td><a href="{% url 'Comments' pk=task.TaskID.TaskID %}" method="post" class="btn btn-success">Comments</a></td>
+
+                </tr></a>
+                {% endfor %}
+            </tbody>
+        </table>
+        
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
