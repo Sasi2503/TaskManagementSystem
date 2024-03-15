@@ -31,7 +31,8 @@ This project is organized into several folders, each serving a specific purpose 
    
 ### 5. Management
    - The Management folder encompasses all the components of the Task Management System.
-   - It includes subfolders for DAL, Services, Bridge, Presentation, View Models, and UI.
+   - It includes subfolders for DAL, Services, Presentation.
+   - Urls.py file plays a key role in navigating websites.
 
 ## Usage
 
