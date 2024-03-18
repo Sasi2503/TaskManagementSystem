@@ -69,7 +69,7 @@ To use the Task Management System, follow these steps:
 
 
 ## Follow
-(https://www.instagram.com/sasidhar316?igsh=eHVhb2oycGFybXN6)
+(https://www.instagram.com/sasidhar316/)
 
 
 
