@@ -1,4 +1,5 @@
 # Python Django
+
 # Test a Django project on multiple versions of Python.
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/python
@@ -24,6 +25,11 @@ steps:
     versionSpec: '$(PYTHON_VERSION)'
     architecture: 'x64'
 
+- task: UsePythonVersion@0
+  inputs:
+    versionSpec: '3.x'
+    addToPath: true
+    architecture: 'x64'
 - task: PythonScript@0
   displayName: 'Export project path'
   inputs:
