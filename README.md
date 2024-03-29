@@ -63,8 +63,7 @@ To use the Task Management System, follow these steps:
    - Once the server is running, log in with the following credentials:
      - **Username**: Admin
      - **Password**: admin#111
-                - OR
-   - Register yourself as a new user to move forward with the application.
+   - Or Register yourself as a new user to move forward with the application.
 
 6. **Accessing the Application**:
    - Access the application through the provided URL and interact with the user interface to manage tasks.
