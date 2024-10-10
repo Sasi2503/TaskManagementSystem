@@ -51,7 +51,7 @@ def user_login(request):
                 return redirect('TaskManagement')  
             else:
                 error_message = 'Invalid username or password.'
-                return render(request, 'login.html', {'error_message': error_message})
+                return render(request, 'Login.html', {'error_message': error_message})
         
     else:
         form = LoginForm()  
@@ -136,7 +136,7 @@ def updateTask(request,pk):
     else:
         taskform=UpdateTaskForm()
         statusform=UpdateStatusForm()
-    return render(request, 'Templates/Update.html', {'task': taskform,'status':statusform,'data':data})
+    return render(request, 'Templates/update.html', {'task': taskform,'status':statusform,'data':data})
 
 
 
