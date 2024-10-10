@@ -21,13 +21,13 @@ This project is organized into several folders, each serving a specific purpose 
    - The Presentation folder contains HTML files that constitute the user interface (UI) of the Task Management System.
    - These HTML files are utilized by the Django framework to render the application interface for users.
 
-   ### 1. View Models
-      - The View Models folder is responsible for managing the data flow between the user interface and the Services layer.
-      - View Models handle incoming data from the UI, prepare and validate it, and then pass it to the Services layer for further processing.
+### 4a. View Models
+   - The View Models folder is responsible for managing the data flow between the user interface and the Services layer.
+   - View Models handle incoming data from the UI, prepare and validate it, and then pass it to the Services layer for further processing.
   
-   ### 2. UI
-      - The UI folder serves as the primary location for the implementation of the application's business logic.
-      - It acts as an intermediary layer, facilitating communication and interaction between the user interface, services, and data access layers.
+### 4b. UI
+   - The UI folder serves as the primary location for the implementation of the application's business logic.
+   - It acts as an intermediary layer, facilitating communication and interaction between the user interface, services, and data access layers.
    
 ### 5. Management
    - The Management folder encompasses all the components of the Task Management System.
